@@ -14,4 +14,4 @@ export PATH=$PATH:/Applications/android-sdk-macosx/tools/
 export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s "/Users/Lloyd/.rvm/scripts/rvm" ]] && source "/Users/Lloyd/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "~/Documents/vendor/z/z.sh"]] && source "~/Documents/vendor/z/z.sh"
+[[ -s "~/Documents/vendor/z/z.sh" ]] && source "~/Documents/vendor/z/z.sh"
