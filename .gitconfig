@@ -1,0 +1,11 @@
+[user]
+	name = 
+	email = 
+[core]
+	excludesfile = /Users/Lloyd/.gitignore_global
+[color]
+	ui = true
+[merge]
+	tool = vimdiff
+[credential]
+	helper = osxkeychain
