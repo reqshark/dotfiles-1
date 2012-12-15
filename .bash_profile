@@ -12,7 +12,11 @@ alias ds="git diff --staged"
 alias top="top -ocpu"
 alias m="~/Documents/vendor/75lbmeteor/meteor"
 
-export PATH=$PATH:/Applications/android-sdk-macosx/tools/
+ANDROID="/Applications/android-sdk-macosx/tools/"
+if [[ -d $ANDROID ]]; then
+	export PATH=$PATH:$ANDROID
+fi
+
 export EDITOR="/usr/local/bin/mate -w"
 
 #[[ -s "/Users/Lloyd/.rvm/scripts/rvm" ]] && source "/Users/Lloyd/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
