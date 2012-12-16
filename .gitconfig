@@ -1,11 +1,10 @@
-[user]
-	name = 
-	email = 
 [core]
-	excludesfile = /Users/Lloyd/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [merge]
 	tool = vimdiff
 [credential]
 	helper = osxkeychain
+[init]
+	templatedir = ~/.git_template
