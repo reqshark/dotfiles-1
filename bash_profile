@@ -11,6 +11,7 @@ alias d="git diff"
 alias ds="git diff --staged"
 alias top="top -ocpu"
 alias m="~/Documents/vendor/75lbmeteor/meteor"
+alias ws="python -m SimpleHTTPServer"
 
 ANDROID="/Applications/android-sdk-macosx/tools/"
 if [[ -d $ANDROID ]]; then
@@ -19,5 +20,4 @@ fi
 
 export EDITOR="/usr/local/bin/mate -w"
 
-#[[ -s "/Users/Lloyd/.rvm/scripts/rvm" ]] && source "/Users/Lloyd/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh

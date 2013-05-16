@@ -1,5 +1,5 @@
-mv ~/dotfiles ~/.dotfiles
-ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/.dotfiles/.tm_properties ~/.tm_properties
-ln -s ~/.dotfiles/.git_template/ ~/.git_template
-ln -s ~/.dotfiles/.gitconfig/ ~/.gitconfig
+# run script from the project dir
+ln -fs $(pwd)/bash_profile ~/.bash_profile
+ln -fs $(pwd)/tm_properties ~/.tm_properties
+ln -fs $(pwd)/git_template ~/.git_template
+ln -fs $(pwd)/gitconfig ~/.gitconfig
