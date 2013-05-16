@@ -8,3 +8,6 @@
 	helper = osxkeychain
 [init]
 	templatedir = ~/.git_template
+[user]
+	name = Lloyd Brookes
+	email = lloyd.brookes@gmail.com
