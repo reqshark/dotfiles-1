@@ -11,3 +11,5 @@
 [user]
 	name = Lloyd Brookes
 	email = lloyd.brookes@gmail.com
+[push]
+	default = simple
