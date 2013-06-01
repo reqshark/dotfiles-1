@@ -1,4 +1,2 @@
-#!/usr/bin/env ruby
-file="~/Pictures/gitsnap//#{Time.now.to_i}.jpg"
-system "imagesnap -q #{file}"
-exit 0
+#!/bin/sh
+gitsnap

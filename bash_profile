@@ -12,6 +12,7 @@ alias ds="git diff --staged"
 alias top="top -ocpu"
 alias m="~/Documents/vendor/75lbmeteor/meteor"
 alias ws="python -m SimpleHTTPServer"
+alias tracegl="node ~/Documents/vendor/tracegl"
 
 ANDROID="/Applications/android-sdk-macosx/tools/"
 if [[ -d $ANDROID ]]; then
