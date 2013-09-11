@@ -21,3 +21,5 @@ fi
 export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
+
+shopt -s globstar

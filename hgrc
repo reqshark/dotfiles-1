@@ -1,0 +1,10 @@
+[ui]
+username = 
+
+[extensions]
+color =
+convert =
+graphlog =
+
+[hooks]
+commit = gitsnap
