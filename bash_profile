@@ -10,8 +10,14 @@ alias pp="git pull"
 alias d="git diff"
 alias ds="git diff --staged"
 alias top="top -ocpu"
-alias m="~/Documents/vendor/75lbmeteor/meteor"
 alias tracegl="node ~/Documents/vendor/tracegl"
+alias hsr="hg serve -p 8080"
+alias hpp="hg pull"
+alias hp="hg push"
+alias hu="hg update"
+alias hc="hg commit -m"
+alias hs="hg status"
+alias hd="hg diff"
 
 ANDROID="/Applications/android-sdk-macosx/tools/"
 if [[ -d $ANDROID ]]; then
@@ -22,4 +28,4 @@ export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
 
-shopt -s globstar
+#shopt -s globstar
