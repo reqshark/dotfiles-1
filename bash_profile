@@ -18,6 +18,7 @@ alias hu="hg update"
 alias hc="hg commit -m"
 alias hs="hg status"
 alias hd="hg diff"
+alias ha="hg addremove"
 
 ANDROID="/Applications/android-sdk-macosx/tools/"
 if [[ -d $ANDROID ]]; then
