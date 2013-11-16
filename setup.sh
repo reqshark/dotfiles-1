@@ -1,7 +1,9 @@
 # run script from the project dir
-ln -fs $(pwd)/bash_profile ~/.bash_profile
-ln -fs $(pwd)/tm_properties ~/.tm_properties
-ln -fs $(pwd)/git_template ~/.git_template
-ln -fs $(pwd)/gitconfig ~/.gitconfig
-ln -fs $(pwd)/hgrc ~/.hgrc
-ln -fs $(pwd)/hgignore_global ~/.hgignore_global
+ln -fsv $(pwd)/bash_profile ~/.bash_profile
+ln -fsv $(pwd)/tm_properties ~/.tm_properties
+rm -v ~/.git_template
+ln -sv $(pwd)/git_template ~/.git_template
+ln -fsv $(pwd)/gitconfig ~/.gitconfig
+ln -fsv $(pwd)/hgrc ~/.hgrc
+ln -fsv $(pwd)/hgignore_global ~/.hgignore_global
+ln -fsv $(pwd)/gitignore_global ~/.gitignore_global
