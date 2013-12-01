@@ -31,3 +31,6 @@ export EDITOR="/usr/local/bin/mate -w"
 export PATH="/usr/local/bin:$PATH"
 
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
+
+source ~/.git-completion.bash
+source ~/.npm-completion.bash

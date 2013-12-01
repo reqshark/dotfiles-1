@@ -1,6 +1,6 @@
 softTabs = true
 tabSize = 4
 
-[ *.html ]
+[ *.{html,hbs} ]
 softTabs = true
 tabSize = 2
