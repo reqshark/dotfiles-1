@@ -4,6 +4,8 @@ alias c="git commit -m"
 alias co="git checkout"
 alias d="git diff"
 alias ds="git diff --staged"
+alias gl="git log"
+alias grep="grep --colour=auto"
 alias h+="hg qpush -a --keep-changes"
 alias h-="hg qpop -a --keep-changes"
 alias ha="hg addremove"
@@ -33,4 +35,6 @@ export PATH="/usr/local/bin:$PATH"
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
 
 source ~/.git-completion.bash
-source ~/.npm-completion.bash
+# source ~/.npm-completion.bash
+
+shopt -s globstar
