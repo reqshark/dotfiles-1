@@ -7,3 +7,4 @@ ln -fsv $(pwd)/gitconfig ~/.gitconfig
 ln -fsv $(pwd)/hgrc ~/.hgrc
 ln -fsv $(pwd)/hgignore_global ~/.hgignore_global
 ln -fsv $(pwd)/gitignore_global ~/.gitignore_global
+ln -fsv $(pwd)/gemrc ~/.gemrc
