@@ -1,1 +1,1 @@
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/75lb/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+![Analytics](https://ga-beacon.appspot.com/UA-27725889-17/dotfiles/README.md?pixel)
