@@ -22,6 +22,8 @@ alias ll="ls -halG"
 alias ls="ls -hG"
 alias npm="npm --registry http://registry.npmjs.eu/"
 alias npm1="npm --registry https://registry.npmjs.org/"
+alias npmp="npm version patch; p; pt; npm1 publish;"
+alias npmm="npm version minor; p; pt; npm1 publish;"
 alias p="git push"
 alias pp="git pull"
 alias pt="git push --tags"
@@ -37,6 +39,5 @@ export PATH="/usr/local/bin:$PATH"
 [[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
 
 source ~/.git-completion.bash
-# source ~/.npm-completion.bash
 
 shopt -s globstar
