@@ -22,8 +22,6 @@ alias ll="ls -halG"
 alias ls="ls -hG"
 alias m="mate .; ccf"
 alias nod="~/Documents/vendor/node/node --harmony"
-alias npmp="npm version patch; p; pt; npm publish;"
-alias npmm="npm version minor; p; pt; npm publish;"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias p="git push"
 alias pp="git pull"
@@ -33,6 +31,25 @@ alias s="git status"
 alias sw="sass --watch --sourcemap"
 alias tidy5="~/Documents/vendor/tidy-html5/bin/tidy -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
+
+function npmp {
+    if [ -n $1 ]
+    then 
+        npm version patch -m $1
+    else
+        npm version patch
+    fi
+    p; pt; npm publish
+}
+function npmm {
+    if [ -n $1 ]
+    then 
+        npm version minor -m $1
+    else
+        npm version minor
+    fi
+    p; pt; npm publish
+}
 
 export EDITOR="/usr/local/bin/mate -w"
 export PATH="/usr/local/bin:$PATH"
