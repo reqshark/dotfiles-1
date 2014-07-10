@@ -32,23 +32,25 @@ alias sw="sass --watch --sourcemap"
 alias tidy5="~/Documents/vendor/tidy-html5/bin/tidy -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
 
+function mou {
+    open -a Mou "$1" ;sleep 0.5;ccf
+}
+
 function npmp {
-    if [ -n $1 ]
+    if [ -n "$1" ]
     then 
-        npm version patch -m $1
+        npm version patch -m "$1" && p && pt && npm publish
     else
-        npm version patch
+        npm version patch  && p && pt && npm publish
     fi
-    p; pt; npm publish
 }
 function npmm {
-    if [ -n $1 ]
+    if [ -n "$1" ]
     then 
-        npm version minor -m $1
+        npm version minor -m "$1" && p && pt && npm publish
     else
-        npm version minor
+        npm version minor && p && pt && npm publish
     fi
-    p; pt; npm publish
 }
 
 export EDITOR="/usr/local/bin/mate -w"
