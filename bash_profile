@@ -36,7 +36,7 @@ function mou {
 }
 
 function m {
-    mate "$1" ;sleep 0.5;ccf
+    mate "${1-.}" ;sleep 0.5;ccf
 }
 
 function npmp {
