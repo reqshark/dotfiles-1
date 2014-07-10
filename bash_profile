@@ -20,7 +20,6 @@ alias hu="hg update"
 alias jd="jsdoc -t templates/haruki -d console"
 alias ll="ls -halG"
 alias ls="ls -hG"
-alias m="mate .; ccf"
 alias nod="~/Documents/vendor/node/node --harmony"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias p="git push"
@@ -34,6 +33,10 @@ alias top="top -ocpu"
 
 function mou {
     open -a Mou "$1" ;sleep 0.5;ccf
+}
+
+function m {
+    mate "$1" ;sleep 0.5;ccf
 }
 
 function npmp {
