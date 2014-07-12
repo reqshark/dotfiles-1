@@ -46,8 +46,7 @@ function ghs {
 }
 
 function repos {
-    curl -s "https://api.github.com/users/${1-75lb}/repos?per_page=100" | array-tools pluck full_name
-    curl -s "https://api.github.com/users/${1-75lb}/repos?page=2&per_page=100" | array-tools pluck full_name
+    curl -s "https://api.github.com/users/${1-75lb}/repos?page=${2-1}&per_page=100" | array-tools pick full_name description
 }
 
 function npmp {
