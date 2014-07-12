@@ -41,6 +41,15 @@ function m {
     mate "${1-.}" ;sleep 0.5;ccf
 }
 
+function ghs {
+    open "https://github.com/search?q=path%3Apackage.json+$1"
+}
+
+function repos {
+    curl -s "https://api.github.com/users/${1-75lb}/repos?per_page=100" | array-tools pluck full_name
+    curl -s "https://api.github.com/users/${1-75lb}/repos?page=2&per_page=100" | array-tools pluck full_name
+}
+
 function npmp {
     if [ -n "$1" ]
     then 
