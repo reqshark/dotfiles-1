@@ -1,24 +1,16 @@
 alias ..="cd .."
 alias a="git add -A"
+alias au="git update-index --assume-unchanged"
+alias au-="git update-index --no-assume-unchanged"
 alias c="git commit -m"
 alias co="git checkout"
 alias code="grep --line-number --exclude *node_modules* --recursive --include *.js"
 alias d="git diff"
 alias ds="git diff --staged"
 alias fu="git fetch upstream"
+alias gb="git branch"
 alias gl="git log"
 alias grep="grep --colour=auto"
-alias ha="hg addremove"
-alias hc="hg commit -m "
-alias hd="hg diff"
-alias hl="hg log -l 15 --stat --no-merges --removed"
-alias hm="hg merge; hc 'merge'"
-alias hp="hg push"
-alias hpp="hg pull -u"
-alias hs="hg status"
-alias hsr="hg serve -p 8080"
-alias hu="hg update"
-alias jd="jsdoc -t templates/haruki -d console"
 alias ll="ls -halG"
 alias ls="ls -hG"
 alias mu="git merge upstream/master"
@@ -42,7 +34,7 @@ function m {
 }
 
 function ghs {
-    open "https://github.com/search?q=path%3Apackage.json+$1"
+    open "https://github.com/search?q=-user%3A%2275lb%22+path%3Apackage.json+%22$1%22&type=Code"
 }
 
 function repos {
