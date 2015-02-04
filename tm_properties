@@ -4,3 +4,6 @@ tabSize = 4
 [ *.{html,hbs} ]
 softTabs = true
 tabSize = 2
+
+excludeInFolderSearch = "{$excludeInFolderSearch,bower_components,node_modules}"
+include = "{$include,.gitignore,.local-web-server.json}"
