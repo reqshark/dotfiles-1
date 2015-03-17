@@ -1,7 +1,8 @@
 softTabs = true
 tabSize = 4
 excludeInFolderSearch = "{$excludeInFolderSearch,bower_components,node_modules}"
-include = "{$include,.gitignore,.local-web-server.json}"
+include = "{$include,.*}"
+exclude = "{$exclude,.DS_Store,.git}"
 
 [ *.{html,hbs} ]
 softTabs = true
