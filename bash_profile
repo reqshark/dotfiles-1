@@ -9,21 +9,20 @@ alias d="git diff"
 alias ds="git diff --staged"
 alias fu="git fetch upstream"
 alias gb="git branch"
-alias gl="git log"
+alias gl="git log --date=relative"
+alias gll="gl --oneline --decorate --graph"
 alias gm="git merge"
 alias grep="grep --colour=auto"
 alias ll="ls -halG"
 alias ls="ls -hG"
 alias mu="git merge upstream/master"
-alias nod="~/Documents/vendor/node/node --harmony"
-alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 alias p="git push"
 alias pp="git pull"
 alias pt="git push --tags"
 alias r="fc -s"
 alias s="git status"
 alias sw="sass --watch --sourcemap"
-alias tidy5="~/Documents/vendor/tidy-html5/bin/tidy -i --indent-spaces 4 -w --drop-empty-elements false "
+alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
 
 function mou {
@@ -62,7 +61,7 @@ function npmm {
 export EDITOR="/usr/local/bin/mate -w"
 export PATH="/usr/local/bin:$PATH"
 
-[[ -s ~/Documents/vendor/z/z.sh ]] && source ~/Documents/vendor/z/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
 
 source ~/.git-completion.bash
 
