@@ -17,6 +17,7 @@ alias ll="ls -halG"
 alias ls="ls -hG"
 alias mu="git merge upstream/master"
 alias p="git push"
+alias pu="git push upstream"
 alias pp="git pull"
 alias pt="git push --tags"
 alias r="fc -s"
@@ -44,17 +45,17 @@ function repos {
 function npmp {
     if [ -n "$1" ]
     then 
-        npm version patch -m "$1" && p && pt && npm publish
+        npm version patch -m "$1" && p && pt && npm publish --registry http://registry.npmjs.org
     else
-        npm version patch  && p && pt && npm publish
+        npm version patch  && p && pt && npm publish --registry http://registry.npmjs.org
     fi
 }
 function npmm {
     if [ -n "$1" ]
     then 
-        npm version minor -m "$1" && p && pt && npm publish
+        npm version minor -m "$1" && p && pt && npm publish --registry http://registry.npmjs.org
     else
-        npm version minor && p && pt && npm publish
+        npm version minor && p && pt && npm publish --registry http://registry.npmjs.org
     fi
 }
 
