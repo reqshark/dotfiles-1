@@ -17,7 +17,7 @@ alias ll="ls -halG"
 alias ls="ls -hG"
 alias mu="git merge upstream/master"
 alias p="git push"
-alias pu="git push upstream"
+alias pu="git push upstream --all"
 alias pp="git pull"
 alias pt="git push --tags"
 alias r="fc -s"
@@ -25,6 +25,7 @@ alias s="git status"
 alias sw="sass --watch --sourcemap"
 alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
+alias npm1="npm --registry http://registry.npmjs.org"
 
 function mou {
     open -a Mou "$1" ;sleep 0.5;ccf
