@@ -3,6 +3,8 @@ tabSize = 4
 excludeInFolderSearch = "{$excludeInFolderSearch,bower_components,node_modules}"
 include = "{$include,.*}"
 exclude = "{$exclude,.DS_Store,.git,.sass-cache}"
+fontSize = 16
+fontName = "Menlo"
 
 [ *.{html,hbs} ]
 softTabs = true
