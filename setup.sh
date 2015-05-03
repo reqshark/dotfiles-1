@@ -6,3 +6,4 @@ ln -sv $(pwd)/git_template ~/.git_template
 ln -fsv $(pwd)/gitconfig ~/.gitconfig
 ln -fsv $(pwd)/gitignore_global ~/.gitignore_global
 ln -fsv $(pwd)/gemrc ~/.gemrc
+ln -fsv $(pwd)/npmrc ~/.npmrc
