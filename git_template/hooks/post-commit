@@ -1,2 +1,2 @@
 #!/bin/sh
-gitsnap &
+imagesnap -q -w 1 ~/Pictures/snap/$(date +%s).jpg &
