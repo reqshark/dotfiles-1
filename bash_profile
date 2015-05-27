@@ -9,6 +9,7 @@ alias d="git diff"
 alias ds="git diff --staged"
 alias fu="git fetch upstream"
 alias gb="git branch"
+alias gc="git clone"
 alias gl="git log --date=relative"
 alias gll="gl --oneline --decorate --graph"
 alias gm="git merge"
@@ -25,18 +26,9 @@ alias s="git status"
 alias sw="sass --watch --sourcemap"
 alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
-alias npml="npm --registry https://nexus.gamesys.co.uk/content/groups/npm-group/"
-
-function mou {
-    open -a Mou "$1" ;sleep 0.5;ccf
-}
 
 function m {
     mate "${1-.}" ;sleep 0.5;ccf
-}
-
-function ghs {
-    open "https://github.com/search?q=-user%3A%2275lb%22+path%3Apackage.json+%22$1%22&type=Code"
 }
 
 function repos {
