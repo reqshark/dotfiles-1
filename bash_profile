@@ -10,7 +10,7 @@ alias ds="git diff --staged"
 alias fu="git fetch upstream"
 alias gb="git branch"
 alias gc="git clone"
-alias gl="git log --date=relative"
+alias gl="git log"
 alias gll="gl --oneline --decorate --graph"
 alias gm="git merge"
 alias grep="grep --colour=auto"
@@ -39,20 +39,18 @@ function repos {
 }
 
 function npmp {
-    if [ -n "$1" ]
-    then 
-        npm version patch -m "$1" && p && pt && npm publish --registry http://registry.npmjs.org
-    else
-        npm version patch  && p && pt && npm publish --registry http://registry.npmjs.org
-    fi
+    npm version patch ${1:+-m $1} && pub
 }
 function npmm {
-    if [ -n "$1" ]
-    then 
-        npm version minor -m "$1" && p && pt && npm publish --registry http://registry.npmjs.org
-    else
-        npm version minor && p && pt && npm publish --registry http://registry.npmjs.org
-    fi
+    npm version minor ${1:+-m $1} && pub
+}
+function npma {
+    npm version major ${1:+-m $1} && pub
+}
+function pub {
+    p &&
+    pt &&
+    npm publish --registry http://registry.npmjs.org ${tag:+--tag $tag}
 }
 
 export EDITOR="/usr/local/bin/mate -w"
