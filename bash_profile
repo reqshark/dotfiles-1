@@ -10,6 +10,7 @@ alias ds="git diff --staged"
 alias fu="git fetch upstream"
 alias gb="git branch"
 alias gc="git clone"
+alias gf="git fetch"
 alias gl="git log"
 alias gll="gl --oneline --decorate --graph"
 alias gm="git merge"
@@ -47,10 +48,19 @@ function npmm {
 function npma {
     npm version major ${1:+-m $1} && pub
 }
+
 function pub {
     p &&
     pt &&
     npm publish --registry http://registry.npmjs.org ${tag:+--tag $tag}
+}
+
+function pac {
+    PACKAGE=$1
+    DATA=$(curl -s "https://api.npmjs.org/downloads/range/last-month/$PACKAGE" | object-tools get downloads)
+    echo "$PACKAGE" | ansi format underline
+    echo "$DATA" | array-tools pluck downloads | array-tools join "," | spark
+    echo "$DATA" | gfmt
 }
 
 export EDITOR="/usr/local/bin/mate -w"
