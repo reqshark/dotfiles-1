@@ -32,7 +32,9 @@ alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 
 alias top="top -ocpu"
 
 function m {
-    mate "${1-.}" ;sleep 0.5;ccf
+    atom "${1-.}" 
+    #sleep 0.5
+    #ccf
 }
 
 function repos {
@@ -71,3 +73,5 @@ export PATH="/usr/local/bin:$PATH"
 source ~/.git-completion.bash
 
 shopt -s globstar
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
