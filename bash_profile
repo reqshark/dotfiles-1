@@ -32,7 +32,7 @@ alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 
 alias top="top -ocpu"
 
 function m {
-    atom "${1-.}" 
+    atom "${1-.}"
     #sleep 0.5
     #ccf
 }
@@ -63,6 +63,14 @@ function pac {
     echo "$PACKAGE" | ansi format underline
     echo "$DATA" | array-tools pluck downloads | array-tools join "," | spark
     echo "$DATA" | gfmt
+}
+
+function dep {
+  PACKAGE=$1
+  DATA=$(curl -s "http://registry.npmjs.org/-/_view/dependedUpon?group_level=3&startkey=%5B%22$PACKAGE%22%5D&endkey=%5B%22$PACKAGE%22%2C%7B%7D%5D&skip=0&limit=1000" | jq '.rows | map({ Package: .key[1], Description: .key[2] })')
+  TOTAL=$(echo "$DATA" | jq length)
+  echo "$DATA" | gfmt
+  echo "total: $TOTAL"
 }
 
 export EDITOR="/usr/local/bin/mate -w"
