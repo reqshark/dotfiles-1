@@ -73,6 +73,10 @@ function dep {
   echo "total: $TOTAL"
 }
 
+function gitsnap {
+  imagesnap -q -w 1 ~/Pictures/snap/$(date +%s).jpg &
+}
+
 export EDITOR="/usr/local/bin/mate -w"
 export PATH="/usr/local/bin:$PATH"
 
@@ -82,4 +86,18 @@ source ~/.git-completion.bash
 
 shopt -s globstar
 
+PS1="\W \u:\$ "
+
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# `.bashrc` settings for hive-cmd
+export PROJECT_HOME=~/code/
+export DJANGO_RESOURCES_HOME=~/code/
+source /usr/local/bin/hive-bootstrap.sh
+
+# Virtualenvwrapper problem
+# https://bitbucket.org/dhellmann/virtualenvwrapper/issues/95/error-on-opening-shell
+export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
+export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
+
+alias hnpm="npm --registry http://technical.hiveonline.co.uk/npm install"
