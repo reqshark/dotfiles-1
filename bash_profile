@@ -79,7 +79,7 @@ function dep {
   PACKAGE=$1
   DATA=$(curl -s "http://registry.npmjs.org/-/_view/dependedUpon?group_level=3&startkey=%5B%22$PACKAGE%22%5D&endkey=%5B%22$PACKAGE%22%2C%7B%7D%5D&skip=0&limit=1000" | jq '.rows | map({ Package: .key[1], Description: .key[2] })')
   TOTAL=$(echo "$DATA" | jq length)
-  echo "$DATA" | gfmt
+  echo "$DATA" | gfmt -w
   echo "total: $TOTAL"
 }
 
@@ -100,4 +100,11 @@ PS1="\W \u:\$ "
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-source tmp/hive.sh
+function init-hive {
+  source /Users/lloyd/Documents/75lb/dotfiles/tmp/hive.sh
+}
+
+export NVM_DIR="/Users/lloyd/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+HISTFILESIZE=50000

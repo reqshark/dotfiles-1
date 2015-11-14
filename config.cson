@@ -1,0 +1,36 @@
+"*":
+  "exception-reporting":
+    userId: "86a53047-4d8d-edde-feb9-4aee8c58726d"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-light-ui"
+      "mac-classic"
+    ]
+    disabledPackages: [
+      "wrap-guide"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".DS_Store"
+      "*.pyc"
+    ]
+  editor:
+    invisibles: {}
+    fontFamily: "Menlo"
+    lineHeight: 1.3
+    softWrap: true
+    tabType: "soft"
+    fontSize: 17
+  "tree-view":
+    showOnRightSide: true
+    hideIgnoredNames: true
+  "one-light-ui": {}
+  docblockr: {}
+  "markdown-preview": {}
+  "merge-conflicts": {}
+  "find-and-replace": {}
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false

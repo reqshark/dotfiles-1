@@ -1,5 +1,6 @@
 [ui]
 username = Lloyd Brookes <lloyd.brookes@hiveonline.co.uk>
+ignore = ~/.hgignore_global
 
 [extensions]
 color =

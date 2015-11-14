@@ -9,3 +9,4 @@ ln -fsv $(pwd)/hgignore_global ~/.hgignore_global
 ln -fsv $(pwd)/gitignore_global ~/.gitignore_global
 ln -fsv $(pwd)/gemrc ~/.gemrc
 ln -fsv $(pwd)/npmrc ~/.npmrc
+ln -fsv $(pwd)/config.cson ~/.atom/config.cson
