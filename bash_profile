@@ -107,4 +107,5 @@ function init-hive {
 export NVM_DIR="/Users/lloyd/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-HISTFILESIZE=50000
+HISTFILESIZE=10000
+HISTSIZE=10000
