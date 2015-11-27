@@ -40,6 +40,7 @@ alias hpp="hg pull -u"
 alias hs="hg status"
 alias hsr="hg serve -p 8080"
 alias hu="hg update"
+alias api="curl -i -H 'content-type: application/json'"
 
 function m {
     atom "${1-.}"

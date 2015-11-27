@@ -34,3 +34,4 @@
   "find-and-replace": {}
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "spell-check": {}
