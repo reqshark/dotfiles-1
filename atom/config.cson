@@ -23,7 +23,7 @@
     lineHeight: 1.3
     softWrap: true
     tabType: "soft"
-    fontSize: 19
+    fontSize: 18
   "tree-view":
     showOnRightSide: true
     hideIgnoredNames: true

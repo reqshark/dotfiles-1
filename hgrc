@@ -8,4 +8,4 @@ convert =
 graphlog =
 
 [hooks]
-commit = gitsnap
+commit = imagesnap -q -w 1 ~/Pictures/snap/$(date +%s).jpg &

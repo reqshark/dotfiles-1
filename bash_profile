@@ -43,7 +43,7 @@ alias hu="hg update"
 alias api="curl -i -H 'content-type: application/json'"
 
 function m {
-    atom "${1-.}"
+    atom-beta "${1-.}"
     #sleep 0.5
     #ccf
 }

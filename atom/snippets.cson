@@ -21,6 +21,9 @@
   'remark':
     'prefix': 'rem'
     'body': '/* $1 */'
+  'use strict':
+    'prefix': 'use'
+    'body': "'use strict'"
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
@@ -32,12 +35,22 @@
     'prefix': 'foo'
     'body': '* * *\n\n&copy; 2015 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).'
 
-'.text.html.basic':
+'.text.html':
   'div':
     'prefix': 'div'
     'body': '<div$1>$2</div>'
-
-'.text.html.basic':
   'link':
     'prefix': 'link'
-    'body': '<link rel="$1" href="${2:/css/style.css}">'
+    'body': '<link rel="${1:stylesheet}" href="${2:/css/style.css}">'
+  'style':
+    'prefix': 'style'
+    'body': '<style>\n  $1\n</style>'
+  'script':
+    'prefix': 'script'
+    'body': '<script>\n  $1\n</script>'
+  'Script With External Source':
+    'prefix': 'scriptsrc'
+    'body': '<script src="$1"></script>$0'
+  'viewport':
+    'prefix': 'viewport'
+    'body': '<meta name="viewport" content="width=device-width, initial-scale=1">'
