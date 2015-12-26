@@ -2,10 +2,14 @@
 username = Lloyd Brookes <lloyd.brookes@hiveonline.co.uk>
 ignore = ~/.hgignore_global
 
+[pager]
+pager = LESS='FRX' less
+
 [extensions]
 color =
 convert =
 graphlog =
+pager =
 
 [hooks]
 commit = imagesnap -q -w 1 ~/Pictures/snap/$(date +%s).jpg &
