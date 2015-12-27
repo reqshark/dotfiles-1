@@ -36,6 +36,9 @@
   'assert':
     'prefix': 'assert'
     'body': "const assert = require('assert')"
+  'hashbang':
+    'prefix': 'hashbang'
+    'body': '#!/usr/bin/env node'
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
