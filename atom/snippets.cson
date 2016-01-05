@@ -26,10 +26,13 @@
     'body': "'use strict'"
   'console.log':
     'prefix': 'log'
-    'body': 'console.log($1)$0',
+    'body': 'console.log($1)$0'
+  'console.error':
+    'prefix': 'error'
+    'body': 'console.error($1)$0'
   'path':
     'prefix': 'path'
-    'body': "const path = require('path')",
+    'body': "const path = require('path')"
   'fs':
     'prefix': 'fs'
     'body': "const fs = require('fs')"
@@ -39,6 +42,15 @@
   'hashbang':
     'prefix': 'hashbang'
     'body': '#!/usr/bin/env node'
+  'arrayify':
+    'prefix': 'arrayify'
+    'body': "const arrayify = require('array-back')"
+  'ansi':
+    'prefix': 'ansi'
+    'body': "const ansi = require('ansi-escape-sequences')"
+  'constructor':
+    'prefix': 'constructor'
+    'body': 'constructor ($1) {\n\t$2\n}'
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
