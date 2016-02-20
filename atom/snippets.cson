@@ -49,8 +49,14 @@
     'prefix': 'ansi'
     'body': "const ansi = require('ansi-escape-sequences')"
   'constructor':
-    'prefix': 'constructor'
+    'prefix': 'constr'
     'body': 'constructor ($1) {\n\t$2\n}'
+  'options default':
+    'prefix': 'options'
+    'body': 'options = options || {}'
+  'test':
+    'prefix': 'test'
+    'body': "test('$1', function (t) {\n  $2\n})"
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
@@ -70,6 +76,9 @@
   'div':
     'prefix': 'div'
     'body': '<div$1>$2</div>'
+  'p':
+    'prefix': 'p'
+    'body': '<p$1>$2</p>'
   'link':
     'prefix': 'link'
     'body': '<link rel="${1:stylesheet}" href="${2:/css/style.css}">'

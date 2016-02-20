@@ -12,7 +12,7 @@ alias gb="git branch"
 alias gc="git clone"
 alias gf="git fetch"
 alias gl="git log"
-alias gll="gl --oneline --decorate --graph"
+alias gll="gl --oneline --decorate --graph --branches"
 alias gm="git merge"
 alias grep="grep --colour=auto"
 alias gs="git stash"
@@ -41,12 +41,7 @@ alias hs="hg status"
 alias hsr="hg serve -p 8080"
 alias hu="hg update"
 alias api="curl -i -H 'content-type: application/json'"
-
-function m {
-    atom-beta "${1-.}"
-    #sleep 0.5
-    #ccf
-}
+alias m="atom ."
 
 function repos {
     curl -s "https://api.github.com/users/${1-75lb}/repos?page=${2-1}&per_page=100" | array-tools pick full_name description
@@ -100,10 +95,6 @@ shopt -s globstar
 PS1="\W \u:\$ "
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
-
-function init-hive {
-  source /Users/lloyd/Documents/75lb/dotfiles/tmp/hive.sh
-}
 
 export NVM_DIR="/Users/lloyd/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
