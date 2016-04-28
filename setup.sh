@@ -14,3 +14,5 @@ ln -fsv $(pwd)/atom/init.coffee ~/.atom/init.coffee
 ln -fsv $(pwd)/atom/keymap.cson ~/.atom/keymap.cson
 ln -fsv $(pwd)/atom/snippets.cson ~/.atom/snippets.cson
 ln -fsv $(pwd)/atom/styles.less ~/.atom/styles.less
+ln -fsv $(pwd)/git-completion.bash ~/.git-completion.bash
+
