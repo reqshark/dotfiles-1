@@ -36,6 +36,9 @@
   'fs':
     'prefix': 'fs'
     'body': "const fs = require('fs')"
+  'typical':
+    'prefix': 'typical'
+    'body': "const t = require('typical')"
   'assert':
     'prefix': 'assert'
     'body': "const assert = require('assert')"
@@ -57,6 +60,9 @@
   'test':
     'prefix': 'test'
     'body': "test('$1', function (t) {\n  $2\n})"
+  'inspect':
+    'prefix': 'inspect'
+    'body': "console.error(require('util').inspect($1, { depth: 3, colors: true }))"
 
 '.text.html.mustache,.source.gfm':
   'js-standard':

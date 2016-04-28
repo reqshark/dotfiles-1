@@ -13,3 +13,5 @@
 	email = lloyd.brookes@gmail.com
 [push]
 	default = simple
+[gui]
+	recentrepo = /Users/lloyd/Documents/75lb/array-tools

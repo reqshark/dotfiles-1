@@ -2,6 +2,8 @@
   "atom-beautify":
     analytics: false
   core:
+    automaticallyUpdate: false
+    closeEmptyWindows: false
     disabledPackages: [
       "wrap-guide"
     ]
@@ -12,8 +14,8 @@
       "*.pyc"
     ]
     themes: [
-      "atom-light-ui"
-      "mac-classic"
+      "one-dark-ui"
+      "atom-dark-syntax"
     ]
   docblockr: {}
   editor:
@@ -46,6 +48,7 @@
     showOnRightSide: true
   welcome:
     showOnStartup: false
+  whitespace: {}
 ".gfm.source":
   whitespace:
     ensureSingleTrailingNewline: false
