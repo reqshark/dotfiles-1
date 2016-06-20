@@ -63,6 +63,9 @@
   'inspect':
     'prefix': 'inspect'
     'body': "console.error(require('util').inspect($1, { depth: 3, colors: true }))"
+  'new Promise':
+    'prefix': 'prom'
+    'body': 'new Promise((resolve, reject) => {\n\t$1\n})$0'
 
 '.text.html.mustache,.source.gfm':
   'js-standard':

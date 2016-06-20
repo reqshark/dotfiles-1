@@ -83,7 +83,7 @@ function gitsnap {
   imagesnap -q -w 1 ~/Pictures/snap/$(date +%s).jpg &
 }
 
-export EDITOR="/usr/local/bin/mate -w"
+export EDITOR=vim
 export PATH="/usr/local/bin:$PATH"
 
 . `brew --prefix`/etc/profile.d/z.sh
@@ -96,8 +96,8 @@ PS1="\W \u:\$ "
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-export NVM_DIR="/Users/lloyd/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 HISTFILESIZE=10000
 HISTSIZE=10000
+
+export NVM_DIR="/Users/lloydb/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
