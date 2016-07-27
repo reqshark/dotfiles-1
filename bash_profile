@@ -41,7 +41,6 @@ alias hpp="hg pull -u"
 alias hs="hg status"
 alias hsr="hg serve -p 8080"
 alias hu="hg update"
-alias api="curl -i -H 'content-type: application/json'"
 alias m="atom ."
 
 function repos {
@@ -102,3 +101,5 @@ HISTSIZE=10000
 
 export NVM_DIR="/Users/lloydb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+source ~/.objective.bash

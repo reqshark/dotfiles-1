@@ -226,7 +226,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -238,11 +238,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>352 313 606 456 0 0 1280 777 </string>
+	<string>352 284 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>328 288 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 255 810 502 0 0 1280 777 </string>
+	<string>1 222 810 501 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 50 810 501 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
@@ -347,9 +347,9 @@
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>1</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.0063187666237354279</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -967,6 +967,8 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>7A9A7C53-855F-441E-B3EC-44875AC9CB88</string>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
@@ -984,7 +986,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>483545193.38336802</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486736226.39011502</real>
+	<real>491169908.41027403</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1047,11 +1049,13 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=92</string>
+	<string>https://iterm2.com/appcasts/final.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-19T08:35:45Z</date>
+	<date>2016-07-25T19:45:47Z</date>
+	<key>SUSkippedVersion</key>
+	<string>3.0.4</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1106,6 +1110,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.2</string>
+	<string>2.1.4</string>
 </dict>
 </plist>
