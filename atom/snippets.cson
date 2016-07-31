@@ -41,13 +41,10 @@
     'body': "const t = require('typical')"
   'assert':
     'prefix': 'assert'
-    'body': "const assert = require('assert')"
+    'body': "var a = require('assert')"
   'hashbang':
     'prefix': 'hashbang'
     'body': '#!/usr/bin/env node'
-  'arrayify':
-    'prefix': 'arrayify'
-    'body': "const arrayify = require('array-back')"
   'ansi':
     'prefix': 'ansi'
     'body': "const ansi = require('ansi-escape-sequences')"
