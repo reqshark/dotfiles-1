@@ -103,4 +103,10 @@ HISTSIZE=10000
 export NVM_DIR="/Users/lloydb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-source ~/.objective.bash
+for FILE in ./local/*
+do
+  source $FILE
+done
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

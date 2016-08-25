@@ -41,7 +41,7 @@
     'body': "const t = require('typical')"
   'assert':
     'prefix': 'assert'
-    'body': "var a = require('assert')"
+    'body': "var a = require('core-assert')"
   'hashbang':
     'prefix': 'hashbang'
     'body': '#!/usr/bin/env node'
@@ -56,13 +56,19 @@
     'body': 'options = options || {}'
   'test':
     'prefix': 'test'
-    'body': "test('$1', function (t) {\n  $2\n})"
+    'body': "runner.test('$1', function () {\n  $2\n})"
   'inspect':
     'prefix': 'inspect'
     'body': "console.error(require('util').inspect($1, { depth: 3, colors: true }))"
   'new Promise':
     'prefix': 'prom'
     'body': 'new Promise((resolve, reject) => {\n\t$1\n})$0'
+  'unhandledRejection':
+    'prefix': 'unhand'
+    'body': "process.on('unhandledRejection', err => console.error(err))"
+  'module.exports':
+    'prefix': 'mod'
+    'body': 'module.exports = $1'
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
@@ -76,7 +82,7 @@
     'body': '* * *\n\n&copy; 2016 Lloyd Brookes \<75pound@gmail.com\>. Documented by [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown).'
   'coveralls':
     'prefix': 'cover'
-    'body': '[![Coverage Status](https://coveralls.io/repos/$1/badge.svg?branch=master&service=github)](https://coveralls.io/github/$1?branch=master)'
+    'body': '[![Coverage Status](https://coveralls.io/repos/github/$1/badge.svg?branch=master)](https://coveralls.io/github/$1?branch=master)'
 
 '.text.html':
   'div':
@@ -104,7 +110,7 @@
 '.source.json':
   'es5':
     'prefix': 'es5'
-    'body': '"es5": "babel --presets babel-preset-es2015 --no-comments lib --out-dir es5"'
+    'body': '"es5": "rm -rf es5 && babel --presets babel-preset-es2015 --no-comments lib --out-dir es5"'
   'coveralls':
     'prefix': 'cover'
-    'body': '"cover": "istanbul cover ./node_modules/.bin/tape test/*.js && cat coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage; echo"'
+    'body': '"cover": "istanbul cover ./node_modules/.bin/test-runner test/*.js && cat coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage; echo"'
