@@ -23,6 +23,7 @@ alias gsh="git show"
 alias ll="ls -halG"
 alias ls="ls -hG"
 alias mu="git merge upstream/master"
+alias nodei="node --inspect --debug-brk"
 alias p="git push"
 alias pu="git push upstream --all; git push upstream --tags"
 alias pp="git pull"
@@ -103,7 +104,7 @@ HISTSIZE=10000
 export NVM_DIR="/Users/lloydb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-for FILE in ./local/*
+for FILE in ~/.sources/*
 do
   source $FILE
 done

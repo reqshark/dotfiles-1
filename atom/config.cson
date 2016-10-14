@@ -4,6 +4,7 @@
       _analyticsUserId: "c94d8077-e9ad-41a5-a920-26d8e596987d"
       analytics: false
   core:
+    automaticallyUpdate: false
     closeEmptyWindows: false
     disabledPackages: [
       "wrap-guide"

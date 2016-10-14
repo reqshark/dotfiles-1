@@ -65,10 +65,16 @@
     'body': 'new Promise((resolve, reject) => {\n\t$1\n})$0'
   'unhandledRejection':
     'prefix': 'unhand'
-    'body': "process.on('unhandledRejection', err => console.error(err))"
+    'body': "process.on('unhandledRejection', (err, p) => console.error(err, p))"
   'module.exports':
     'prefix': 'mod'
     'body': 'module.exports = $1'
+  'inherit':
+    'prefix': 'inherit'
+    'body': """
+      $1.prototype = Object.create($2.prototype);
+      $1.prototype.constructor = $1;
+      """
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
@@ -114,3 +120,12 @@
   'coveralls':
     'prefix': 'cover'
     'body': '"cover": "istanbul cover ./node_modules/.bin/test-runner test/*.js && cat coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage; echo"'
+  'standard':
+    'prefix': 'standard'
+    'body': """
+      "standard": {
+        "ignore": [
+
+        ]
+      }
+      """
