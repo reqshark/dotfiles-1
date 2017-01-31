@@ -98,8 +98,8 @@ PS1="\W \u:\$ "
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-HISTFILESIZE=10000
-HISTSIZE=10000
+HISTFILESIZE=1000
+HISTSIZE=1000
 
 export NVM_DIR="/Users/lloydb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

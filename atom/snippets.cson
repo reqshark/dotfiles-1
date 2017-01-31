@@ -59,7 +59,7 @@
     'body': "runner.test('$1', function () {\n  $2\n})"
   'inspect':
     'prefix': 'inspect'
-    'body': "console.error(require('util').inspect($1, { depth: 3, colors: true }))"
+    'body': "console.error(require('util').inspect($1, { depth: 6, colors: true }))"
   'new Promise':
     'prefix': 'prom'
     'body': 'new Promise((resolve, reject) => {\n\t$1\n})$0'
@@ -74,6 +74,41 @@
     'body': """
       $1.prototype = Object.create($2.prototype);
       $1.prototype.constructor = $1;
+      """
+  'process warnings':
+    'prefix': 'prowarn'
+    'body': """
+      process.on('warning', warning => {
+        console.warn(warning.name)
+        console.warn(warning.message)
+        console.warn(warning.stack)
+      })
+      """
+  'universal module definition':
+    'prefix': 'umd'
+    'body': """
+      (function (root, factory) {
+        if (typeof define === 'function' && define.amd) {
+          define(['b'], factory);
+        } else if (typeof module === 'object' && module.exports) {
+          module.exports = factory(require('b'));
+        } else {
+          root.returnExports = factory(root.b);
+        }
+      }(this, function (b) {
+        return {};
+      }));
+      """
+  'feature detection':
+    'prefix': 'detect'
+    'body': """
+      var detect = require('feature-detect-es6')
+
+      if (detect.all('class', 'arrowFunction', 'let', 'const')) {
+        module.exports = require('./src/lib/$1')
+      } else {
+        module.exports = require('./es5/lib/$1')
+      }
       """
 
 '.text.html.mustache,.source.gfm':
@@ -116,7 +151,7 @@
 '.source.json':
   'es5':
     'prefix': 'es5'
-    'body': '"es5": "rm -rf es5 && babel --presets babel-preset-es2015 --no-comments lib --out-dir es5"'
+    'body': '"es5": "rm -rf es5 && babel --presets babel-preset-es2015 --no-comments src --out-dir es5"'
   'coveralls':
     'prefix': 'cover'
     'body': '"cover": "istanbul cover ./node_modules/.bin/test-runner test/*.js && cat coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage; echo"'

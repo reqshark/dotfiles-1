@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = atom --wait
+	pager = less -S
 [color]
 	ui = true
 [merge]
@@ -14,5 +14,3 @@
 	email = lloyd.brookes@gmail.com
 [push]
 	default = simple
-[gui]
-	recentrepo = /Users/lloyd/Documents/75lb/array-tools
