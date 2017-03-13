@@ -111,3 +111,8 @@ done
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+function transcode {
+  echo "handbrake -i $1 -o ${1%.*}.mp4 --preset Normal"
+  handbrake -i "$1" -o "${1%.*}".mp4 --preset Normal
+}
