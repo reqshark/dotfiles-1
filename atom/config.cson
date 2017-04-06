@@ -1,9 +1,12 @@
 "*":
   "atom-beautify":
+    css:
+      indent_size: 2
     general:
       _analyticsUserId: "c94d8077-e9ad-41a5-a920-26d8e596987d"
       analytics: false
     html:
+      indent_char: " "
       indent_size: 2
     js: {}
   core:

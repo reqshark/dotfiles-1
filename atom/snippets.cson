@@ -110,6 +110,16 @@
         module.exports = require('./es5/lib/$1')
       }
       """
+  'test-runner':
+    'prefix': 'runner'
+    'body': """
+      const TestRunner = require('test-runner')
+
+      const runner = new TestRunner()
+      """
+  'EventEmitter':
+    'prefix': 'ee'
+    'body': "const EventEmitter = require('events')"
 
 '.text.html.mustache,.source.gfm':
   'js-standard':

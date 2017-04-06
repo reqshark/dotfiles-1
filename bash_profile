@@ -11,8 +11,8 @@ alias fu="git fetch upstream"
 alias gb="git branch"
 alias gc="git clone"
 alias gf="git fetch"
-alias gl="git log"
-alias gll="gl --oneline --decorate --graph --branches"
+alias gl="git log --decorate"
+alias gll="gl --oneline --graph --branches"
 alias gm="git merge"
 alias gr="git reset"
 alias grep="grep --colour=auto"
@@ -22,6 +22,7 @@ alias gsl="git stash list"
 alias gsh="git show"
 alias ll="ls -halG"
 alias ls="ls -hG"
+alias m="atom ."
 alias mu="git merge upstream/master"
 alias nodei="node --inspect --debug-brk"
 alias p="git push"
@@ -30,23 +31,10 @@ alias pp="git pull"
 alias pt="git push --tags"
 alias r="fc -s"
 alias s="git status"
-alias sw="sass --watch --sourcemap"
-alias tidy5="~/Documents/vendor/tidy-html5/build/cmake/tidy5 -i --indent-spaces 4 -w --drop-empty-elements false "
 alias top="top -ocpu"
-alias ha="hg addremove"
-alias hc="hg commit -m "
-alias hd="hg diff"
-alias hl="hg log -l 15 --stat --no-merges --removed"
-alias hm="hg merge; hc 'merge'"
-alias hp="hg push"
-alias hpp="hg pull -u"
-alias hs="hg status"
-alias hsr="hg serve -p 8080"
-alias hu="hg update"
-alias m="atom ."
 
 function repos {
-    curl -s "https://api.github.com/users/${1-75lb}/repos?page=${2-1}&per_page=100" | array-tools pick full_name description
+    curl -s "https://api.github.com/users/${1-75lb}/repos?page=${2-1}&per_page=100" | jq '[ .[] | { full_name, description }]'
 }
 
 function npmp {
@@ -98,8 +86,8 @@ PS1="\W \u:\$ "
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-HISTFILESIZE=1000
-HISTSIZE=1000
+HISTFILESIZE=5000
+HISTSIZE=5000
 
 export NVM_DIR="/Users/lloydb/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
