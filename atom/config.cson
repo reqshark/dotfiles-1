@@ -1,7 +1,10 @@
 "*":
   "atom-beautify":
     css:
-      indent_size: 2
+      end_with_newline: true
+      indent_char: "  "
+      indent_size: 1
+      selector_separator_newline: true
     general:
       _analyticsUserId: "c94d8077-e9ad-41a5-a920-26d8e596987d"
       analytics: false

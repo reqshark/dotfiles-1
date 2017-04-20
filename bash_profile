@@ -2,6 +2,7 @@ alias ..="cd .."
 alias a="git add -A"
 alias au="git update-index --assume-unchanged"
 alias au-="git update-index --no-assume-unchanged"
+alias bu="brew upgrade && brew cleanup"
 alias c="git commit -m"
 alias co="git checkout"
 alias code='grep --line-number --exclude-dir "node_modules" --recursive --include "*.js"'
