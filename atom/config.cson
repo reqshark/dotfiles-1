@@ -1,7 +1,9 @@
 "*":
   "atom-beautify":
     css:
+      default_beautifier: "CSScomb"
       end_with_newline: true
+      force_indentation: true
       indent_char: "  "
       indent_size: 1
       selector_separator_newline: true
@@ -11,12 +13,16 @@
     html:
       indent_char: " "
       indent_size: 2
-    js: {}
+    js:
+      brace_style: "expand"
+      end_with_newline: true
+      keep_array_indentation: true
   core:
     closeEmptyWindows: false
     disabledPackages: [
       "wrap-guide"
       "atom-typescript"
+      "github"
     ]
     ignoredNames: [
       ".git"
@@ -62,6 +68,7 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   "tree-view":
+    alwaysOpenExisting: true
     hideIgnoredNames: true
     showOnRightSide: true
   welcome:

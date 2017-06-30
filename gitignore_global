@@ -34,3 +34,9 @@ npm-debug.log
 out/
 tmp/
 *.pyc
+lws.config.js
+
+yarn.lock
+package-lock.json
+coverage
+package-lock.json

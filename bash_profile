@@ -25,7 +25,7 @@ alias ll="ls -halG"
 alias ls="ls -hG"
 alias m="atom ."
 alias mu="git merge upstream/master"
-alias nodei="node --inspect --debug-brk"
+alias nodei="node --inspect-brk"
 alias p="git push"
 alias pu="git push upstream --all; git push upstream --tags"
 alias pp="git pull --prune"
@@ -102,6 +102,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 function transcode {
-  echo "handbrake -i $1 -o ${1%.*}.mp4 --preset Normal"
-  handbrake -i "$1" -o "${1%.*}".mp4 --preset Normal
+  echo "handbrake -i $1 -o ${1%.*}.mp4 --preset Normal --optimize"
+  handbrake -i "$1" -o "${1%.*}".mp4 --preset Normal --optimize
 }
