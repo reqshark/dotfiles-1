@@ -4,6 +4,7 @@ alias au="git update-index --assume-unchanged"
 alias au-="git update-index --no-assume-unchanged"
 alias bu="brew upgrade && brew cleanup"
 alias c="git commit -m"
+alias ca="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 alias co="git checkout"
 alias code='grep --line-number --exclude-dir "node_modules" --recursive --include "*.js"'
 alias d="git diff"
@@ -104,4 +105,8 @@ export PATH=$PATH:$GOPATH/bin
 function transcode {
   echo "handbrake -i $1 -o ${1%.*}.mp4 --preset Normal --optimize"
   handbrake -i "$1" -o "${1%.*}".mp4 --preset Normal --optimize
+}
+
+function purge {
+  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch $1' --prune-empty --tag-name-filter cat -- --all
 }

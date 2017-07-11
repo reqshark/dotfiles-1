@@ -126,6 +126,20 @@
   'not implemented':
     'prefix': 'notimp'
     'body': "throw new Error('not implemented')"
+  'Lws middleware':
+    'prefix': 'middleware'
+    'body': """
+      module.exports = MiddlewareBase => class $1 extends MiddlewareBase {
+        $2
+      }
+      """
+  'Lws mock':
+    'prefix': 'mock'
+    'body': """
+      module.exports = MockBase => class $1 extends MockBase {
+        $2
+      }
+      """
 
 '.text.html.mustache,.source.gfm':
   'js-standard':
